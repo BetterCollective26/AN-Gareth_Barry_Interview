@@ -124,19 +124,38 @@
     border-radius: 999px;
   }
 
-  .an-jump a {
+  .an-jump button {
+    appearance: none;
+    -webkit-appearance: none;
     display: inline-block;
     color: var(--an-ink);
+    background: transparent;
+    border: 0;
     text-decoration: none;
+    font: inherit;
     font-size: 13px;
     font-weight: 800;
+    line-height: 1.58;
     padding: 8px 12px;
     border-radius: 999px;
+    cursor: pointer;
   }
 
-  .an-jump a:hover {
+  .an-jump button:hover,
+  .an-jump button:focus-visible {
     background: var(--an-green);
     color: #ffffff;
+    outline: none;
+  }
+
+  #key-findings,
+  #top-quotes,
+  #world-cup,
+  #premier-league,
+  #transfers,
+  #efl-scotland,
+  #full-interview {
+    scroll-margin-top: 88px;
   }
 
   .an-card {
@@ -424,13 +443,13 @@
 <main class="an-gb-page">
 
   <nav class="an-jump" aria-label="Article sections">
-    <a href="#key-findings">Key Findings</a>
-    <a href="#top-quotes">Top Quotes</a>
-    <a href="#world-cup">World Cup</a>
-    <a href="#premier-league">Premier League</a>
-    <a href="#transfers">Transfers</a>
-    <a href="#efl-scotland">EFL & Scottish Football</a>
-    <a href="#full-interview">Full Interview</a>
+    <button type="button" onclick="document.getElementById('key-findings').scrollIntoView({ behavior: 'smooth', block: 'start' });">Key Findings</button>
+    <button type="button" onclick="document.getElementById('top-quotes').scrollIntoView({ behavior: 'smooth', block: 'start' });">Top Quotes</button>
+    <button type="button" onclick="document.getElementById('world-cup').scrollIntoView({ behavior: 'smooth', block: 'start' });">World Cup</button>
+    <button type="button" onclick="document.getElementById('premier-league').scrollIntoView({ behavior: 'smooth', block: 'start' });">Premier League</button>
+    <button type="button" onclick="document.getElementById('transfers').scrollIntoView({ behavior: 'smooth', block: 'start' });">Transfers</button>
+    <button type="button" onclick="document.getElementById('efl-scotland').scrollIntoView({ behavior: 'smooth', block: 'start' });">EFL & Scottish Football</button>
+    <button type="button" onclick="document.getElementById('full-interview').scrollIntoView({ behavior: 'smooth', block: 'start' });">Full Interview</button>
   </nav>
 
   <section id="key-findings" class="an-card">
